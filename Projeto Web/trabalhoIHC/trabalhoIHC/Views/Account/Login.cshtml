@@ -1,71 +1,74 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutLimpo.cshtml";
+    <style>
+        body {
+            background: #e9e9e9;
+            color: #666666;
+            font-family: 'RobotoDraft', 'Roboto', sans-serif;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
 }
 
-<div class="container">
+<div class="container col-md-6 col-md-offset-3">
     <div class="row">
         <div class="container">
             <div class="card"></div>
             <div class="card">
-                <h1 class="title">Login</h1>
+                <h1 class="title">Acesso ao Portal</h1>
                 <form>
                     <div class="input-container">
                         <input type="text" id="Username" required="required" />
-                        <label for="Username">Username</label>
+                        <label for="Username">Login</label>
                         <div class="bar"></div>
                     </div>
                     <div class="input-container">
                         <input type="password" id="Password" required="required" />
-                        <label for="Password">Password</label>
+                        <label for="Password">Senha</label>
                         <div class="bar"></div>
                     </div>
                     <div class="button-container">
-                        <button><span>Go</span></button>
+                        <button><span class="glyphicon glyphicon-log-in"></span></button>
                     </div>
-                    <div class="footer"><a href="#">Forgot your password?</a></div>
+                    <div class="footer"><a href="@Url.Content("http://www.uniron.edu.br/portais/usuarioportal/")">Esqueceu a senha?</a></div>
                 </form>
             </div>
             <div class="card alt">
-                <div class="toggle"></div>
+                <div class="toggle">
+                    <span id="icon" class="glyphicon glyphicon-exclamation-sign"></span>
+                </div>
                 <h1 class="title">
-                    Register
+                    Info
                     <div class="close"></div>
                 </h1>
-                <form>
-                    <div class="input-container">
-                        <input type="text" id="Username" required="required" />
-                        <label for="Username">Username</label>
-                        <div class="bar"></div>
+                <div class="footer input-container" style="text-align: justify">
+                    <div class="container">
+                        <p>Nova plataforma de autenticação dos portais da Uniron, sim dos portais!</p>
+                        <hr />
+                        <p>Não haverá portais diferentes para acessos diferentes, agora está tudo integrado!</p>
+                        <hr />
+                        <p>Desenvolvido pelos alunnos do 7º Período!</p>
                     </div>
-                    <div class="input-container">
-                        <input type="password" id="Password" required="required" />
-                        <label for="Password">Password</label>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="input-container">
-                        <input type="password" id="Repeat Password" required="required" />
-                        <label for="Repeat Password">Repeat Password</label>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="button-container">
-                        <button><span>Next</span></button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-        <!-- Portfolio--><a id="portfolio" href="http://pkshopy.com/farooqshad/" title="View my portfolio!"><i class="fa fa-link"></i></a>
+        <!-- Portfolio--><a id="portfolio" href="@Url.Content("http://www2.uniron.edu.br/wp-core/")" title="Go To Home!"><i class="glyphicon glyphicon-home"></i></a>
     </div>
 </div>
 @section scripts{
-    @Styles.Render("~/Content/styleLogin.css")
+    @*@Styles.Render("~/Content/styleLogin.css")*@
     <script>
         $(document).ready(function () {
             $('.toggle').on('click', function () {
                 $('.container').stop().addClass('active');
+                $('#icon').stop().removeClass('glyphicon-exclamation-sign');
             });
 
             $('.close').on('click', function () {
                 $('.container').stop().removeClass('active');
+                $('#icon').stop().addClass('glyphicon-exclamation-sign');
             });
         });
     </script>

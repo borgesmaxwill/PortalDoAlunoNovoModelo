@@ -24,6 +24,7 @@ namespace trabalhoIHC
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/styleLogin.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
