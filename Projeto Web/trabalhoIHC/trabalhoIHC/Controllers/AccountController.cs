@@ -12,5 +12,13 @@ namespace trabalhoIHC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Login(string Password, string Username)
+        {
+            if (Password.Equals("admin") && Username.Equals("admin"))
+                return RedirectToAction("Index", "Home");
+            return View();
+        }
     }
 }
