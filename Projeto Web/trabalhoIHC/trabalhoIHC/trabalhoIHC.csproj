@@ -203,7 +203,12 @@
     <Content Include="Views\Shared\_LayoutLimpo.cshtml" />
     <Content Include="Views\Home\_InformacaoDoUsuario.cshtml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Content Include="Views\Home\_TelaPrincipal.cshtml" />
+=======
+    <Content Include="Views\Library\QuickSearch.cshtml" />
+    <Content Include="Views\Library\DetailedSearch.cshtml" />
+>>>>>>> a0121972fb3157046829784b524ab5e33671d1f9
 =======
     <Content Include="Views\Library\QuickSearch.cshtml" />
     <Content Include="Views\Library\DetailedSearch.cshtml" />
