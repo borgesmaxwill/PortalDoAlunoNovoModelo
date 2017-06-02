@@ -161,10 +161,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\styleInfoUser.css" />
     <Content Include="Content\styleLogin.css" />
+    <Content Include="Content\telaPrincipal.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\IMG-20170503-WA0001.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\share_logo_1489434002.png" />
     <Content Include="Images\uniron-log.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -197,6 +201,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutLimpo.cshtml" />
     <Content Include="Views\Home\_InformacaoDoUsuario.cshtml" />
+    <Content Include="Views\Home\_TelaPrincipal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

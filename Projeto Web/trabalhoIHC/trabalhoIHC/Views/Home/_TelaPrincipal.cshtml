@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+@Styles.Render("~/Content/telaPrincipal.css")
+
+<div class="container text-center">
+    <div class="row">
+        <div class="" role="tabpanel">
+            <div class="col-xs-4 col-sm-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-justified" id="nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#biblioteca" aria-controls="biblioteca" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-book fa-4x"></i>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="#financeiro" aria-controls="financeiro" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-dollar fa-4x"></i>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="#aluno" aria-controls="aluno" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-mortar-board fa-4x"></i>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="#dados" aria-controls="dados" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-table fa-4x"></i>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-8 col-sm-12">
+                <!-- Tab panes -->
+                <div class="tab-content" id="tabs-collapse">
+                    <div role="tabpanel" class="tab-pane fade in active" id="biblioteca">
+                        <div class="tab-inner">
+                                <p class="lead">Aqui ficará a partial de Biblioteca.</p>
+                                <hr>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="financeiro">
+                        <div class="tab-inner">
+                            <p class="lead">Aqui ficará a partial de financeiro.</p>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="aluno">
+                        <div class="tab-inner">
+                            <p class="lead">Aqui ficará a partial de aluno.</p>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="dados">
+                        <div class="tab-inner">
+                            <p class="lead">Aqui ficara a partial dos dados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

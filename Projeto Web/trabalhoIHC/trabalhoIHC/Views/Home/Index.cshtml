@@ -2,38 +2,13 @@
     Layout = "~/Views/Shared/_LayoutLimpo.cshtml";
     ViewBag.Title = "Pagina Inicial";
 }
-
-<div class="panel">
-    <div class="panel-heading">
-
+<div class="panel panel-body">
+    <div class="col-md-4 col-sm-6">
+        @Html.Partial("_InformacaoDoUsuario")
     </div>
 
-    <div class="panel-body">
-        <div class="col-md-3">
-            @Html.Partial("_InformacaoDoUsuario")
-        </div>
-
-        <div class="col-md-9">
-            <div>
-
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="home">...</div>
-                    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-                    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-                    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-                </div>
-
-            </div>
-        </div>
+    <div class="col-md-8 col-sm-6">
+        @Html.Partial("_TelaPrincipal")
     </div>
 </div>
 
