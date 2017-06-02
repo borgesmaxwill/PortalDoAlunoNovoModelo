@@ -151,6 +151,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LibraryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,7 +202,12 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutLimpo.cshtml" />
     <Content Include="Views\Home\_InformacaoDoUsuario.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\_TelaPrincipal.cshtml" />
+=======
+    <Content Include="Views\Library\QuickSearch.cshtml" />
+    <Content Include="Views\Library\DetailedSearch.cshtml" />
+>>>>>>> a0121972fb3157046829784b524ab5e33671d1f9
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
