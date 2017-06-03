@@ -1,5 +1,4 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutLimpo.cshtml";
     ViewBag.Title = "Pagina Inicial";
 }
 <div class="panel panel-body">
@@ -13,5 +12,22 @@
 </div>
 
 @section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#btnBuscaSimple").on("click", function () {
+                $.get('@Url.Action("QuickSearch","Library")', function(data) {
+                    $("#buscaBiblioteca").empty();
+                    $("#buscaBiblioteca").html(data);
+                });
+            });
+
+            $("#btnBuscaDetalhada").on("click", function () {
+                $.get('@Url.Action("DetailedSearch","Library")', function (data) {
+                    $("#buscaBiblioteca").empty();
+                    $("#buscaBiblioteca").html(data);
+                });
+            });
+        });
+    </script>
 
 }

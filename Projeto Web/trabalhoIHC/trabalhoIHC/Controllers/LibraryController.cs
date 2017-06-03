@@ -8,9 +8,9 @@ namespace trabalhoIHC.Controllers
 {
     public class LibraryController : Controller
     {
-        public ActionResult QuickSearch()
+        public PartialViewResult QuickSearch()
         {
-            return View();
+            return PartialView();
         }
 
         //[HttpPost]
@@ -19,9 +19,9 @@ namespace trabalhoIHC.Controllers
         //    return View();
         //}
 
-        public ActionResult DetailedSearch()
+        public PartialViewResult DetailedSearch()
         {
-            return View();
+            return PartialView();
         }
 
         //[HttpPost]
