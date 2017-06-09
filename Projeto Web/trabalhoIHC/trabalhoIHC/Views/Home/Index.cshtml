@@ -14,49 +14,55 @@
 @section scripts{
     <script>
         $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $("#resultadoRequisicao").hide();
+
             $("#btnBuscaSimple").on("click", function () {
                 $.get('@Url.Action("QuickSearch","Library")', function(data) {
-                    $("#buscaBiblioteca").empty();
-                    $("#buscaBiblioteca").html(data);
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
                 });
             });
 
             $("#btnBuscaDetalhada").on("click", function () {
                 $.get('@Url.Action("DetailedSearch","Library")', function (data) {
-                    $("#buscaBiblioteca").empty();
-                    $("#buscaBiblioteca").html(data);
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
                 });
             });
-        });
 
-        $(document).ready(function () {
             $("#btnDeclaracaoDeMatricula").on("click", function () {
                 $.get('@Url.Action("RegistrationStatement", "Secretary")', function(data) {
-                    $("#buscaSecretaria").empty();
-                    $("#buscaSecretaria").html(data);
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
                 });
             });
+
 
             $("#btnHistoricoEscolar").on("click", function () {
                 $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
-                    $("#buscaSecretaria").empty();
-                    $("#buscaSecretaria").html(data);
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
                 });
             });
-        });
 
-         $(document).ready(function () {
             $("#btnQuadroSolicitacoes").on("click", function () {
                 $.get('@Url.Action("RequestsTable", "Secretary")', function(data) {
-                    $("#buscaSecretaria").empty();
-                    $("#buscaSecretaria").html(data);
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
                 });
             });
 
             $("#btnHistoricoEscolar").on("click", function () {
                 $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
-                    $("#buscaSecretaria").empty();
-                    $("#buscaSecretaria").html(data);
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
                 });
             });
         });

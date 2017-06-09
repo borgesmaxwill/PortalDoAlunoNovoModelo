@@ -10,7 +10,7 @@ namespace trabalhoIHC.Controllers
     {
         public PartialViewResult QuickSearch()
         {
-            return PartialView();
+            return PartialView("_QuickSearch");
         }
 
         //[HttpPost]

@@ -205,7 +205,7 @@
     <Content Include="Views\Shared\_LayoutLimpo.cshtml" />
     <Content Include="Views\Home\_InformacaoDoUsuario.cshtml" />
     <Content Include="Views\Home\_TelaPrincipal.cshtml" />
-    <Content Include="Views\Library\QuickSearch.cshtml" />
+    <Content Include="Views\Library\_QuickSearch.cshtml" />
     <Content Include="Views\Library\DetailedSearch.cshtml" />
     <Content Include="Views\Secretary\RegistrationStatement.cshtml" />
     <Content Include="Views\Secretary\SchoolRecords.cshtml" />
