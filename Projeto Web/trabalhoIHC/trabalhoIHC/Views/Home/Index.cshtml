@@ -28,6 +28,38 @@
                 });
             });
         });
+
+        $(document).ready(function () {
+            $("#btnDeclaracaoDeMatricula").on("click", function () {
+                $.get('@Url.Action("RegistrationStatement", "Secretary")', function(data) {
+                    $("#buscaSecretaria").empty();
+                    $("#buscaSecretaria").html(data);
+                });
+            });
+
+            $("#btnHistoricoEscolar").on("click", function () {
+                $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
+                    $("#buscaSecretaria").empty();
+                    $("#buscaSecretaria").html(data);
+                });
+            });
+        });
+
+         $(document).ready(function () {
+            $("#btnQuadroSolicitacoes").on("click", function () {
+                $.get('@Url.Action("RequestsTable", "Secretary")', function(data) {
+                    $("#buscaSecretaria").empty();
+                    $("#buscaSecretaria").html(data);
+                });
+            });
+
+            $("#btnHistoricoEscolar").on("click", function () {
+                $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
+                    $("#buscaSecretaria").empty();
+                    $("#buscaSecretaria").html(data);
+                });
+            });
+        });
     </script>
 
 }

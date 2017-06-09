@@ -152,6 +152,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibraryController.cs" />
+    <Compile Include="Controllers\SecretaryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -206,6 +207,9 @@
     <Content Include="Views\Home\_TelaPrincipal.cshtml" />
     <Content Include="Views\Library\QuickSearch.cshtml" />
     <Content Include="Views\Library\DetailedSearch.cshtml" />
+    <Content Include="Views\Secretary\RegistrationStatement.cshtml" />
+    <Content Include="Views\Secretary\SchoolRecords.cshtml" />
+    <Content Include="Views\Secretary\RequestsTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
