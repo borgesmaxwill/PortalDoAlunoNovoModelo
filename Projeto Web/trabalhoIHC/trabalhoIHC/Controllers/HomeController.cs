@@ -6,25 +6,13 @@ using System.Web.Mvc;
 
 namespace trabalhoIHC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : MessagerBaseController
     {
         public ActionResult Index()
         {
+            this.AddToastMessage("Olá Mundo!", "Esse é o primeiro teste", ToastType.Success);
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

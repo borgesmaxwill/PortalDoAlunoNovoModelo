@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace trabalhoIHC.Controllers
 {
-    public class LibraryController : Controller
+    public class LibraryController : MessagerBaseController
     {
         public PartialViewResult QuickSearch()
         {

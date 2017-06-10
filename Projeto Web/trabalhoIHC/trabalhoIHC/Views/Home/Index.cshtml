@@ -65,6 +65,22 @@
                     $("#resultadoRequisicao").show();
                 });
             });
+
+            $("#btnQuadroDeHorarios").on("click", function () {
+                $.get('@Url.Action("RetornarQuadroDeHorarios", "InformacoesAcademicas")', function (data) {
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
+                });
+            });
+
+            $("#btnGradeAcademica").on("click", function () {
+                $.get('@Url.Action("RetornarGradeAcademica", "InformacoesAcademicas")', function (data) {
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
+                });
+            });
         });
     </script>
 

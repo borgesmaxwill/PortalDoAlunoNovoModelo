@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    @*@Styles.Render("~/Content/toastr")*@  
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/styleLogin.css")
     @Scripts.Render("~/bundles/modernizr")
@@ -17,6 +17,7 @@
             font-size: 14px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow: scroll;
         }
     </style>
 </head>
@@ -26,6 +27,8 @@
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/toastr")*@
+    @*@Html.Partial("_Toastr")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

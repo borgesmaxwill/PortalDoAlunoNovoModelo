@@ -2,86 +2,89 @@
     Layout = null;
 }
 
-<div class="col-xs-4 col-sm-12">
-    <div class="" role="tabpanel">
-        <div class="card__list">
-            <div class="card__item card__item--blue">
+<div class="" role="tabpanel">
+    <div class="card__list">
+        <div class="card__item card__item--blue">
 
-                <ul class="nav nav-justified" id="nav-tabs" role="tablist">
+            <ul class="nav nav-justified" id="nav-tabs" role="tablist">
 
-                    <li role="presentation" class="">
-                        <a href="#biblioteca" aria-controls="biblioteca" role="tab" data-toggle="tab">
-                            <i class="img-circle fa fa-book fa-4x"></i>
-                            <span class="quote"><i class="fa fa-quote-left"></i></span>
-                        </a>
-                    </li>
+                <li role="presentation" class="">
+                    <a href="#biblioteca" aria-controls="biblioteca" role="tab" data-toggle="tab">
+                        <i class="img-circle fa fa-book fa-4x"></i>
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                    </a>
+                </li>
 
-                    <li role="presentation" class="">
-                        <a href="#financeiro" aria-controls="financeiro" role="tab" data-toggle="tab">
-                            <i class="img-circle fa fa-dollar fa-4x"></i>
-                            <span class="quote"><i class="fa fa-quote-left"></i></span>
-                        </a>
-                    </li>
+                <li role="presentation" class="">
+                    <a href="#financeiro" aria-controls="financeiro" role="tab" data-toggle="tab">
+                        <i class="img-circle fa fa-handshake-o fa-4x"></i>
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                    </a>
+                </li>
 
-                    <li role="presentation" class="">
-                        <a href="#aluno" aria-controls="aluno" role="tab" data-toggle="tab">
-                            <i class="img-circle fa fa-mortar-board fa-4x"></i>
-                            <span class="quote"><i class="fa fa-quote-left"></i></span>
-                        </a>
-                    </li>
+                <li role="presentation" class="">
+                    <a href="#aluno" aria-controls="aluno" role="tab" data-toggle="tab">
+                        <i class="img-circle fa fa-mortar-board fa-4x"></i>
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                    </a>
+                </li>
 
-                    <li role="presentation" class="">
-                        <a href="#dados" aria-controls="dados" role="tab" data-toggle="tab">
-                            <i class="img-circle fa fa-table fa-4x"></i>
-                            <span class="quote"><i class="fa fa-quote-left"></i></span>
-                        </a>
-                    </li>
+                <li role="presentation" class="">
+                    <a href="#dados" aria-controls="dados" role="tab" data-toggle="tab">
+                        <i class="img-circle fa fa-table fa-4x"></i>
+                        <span class="quote"><i class="fa fa-quote-left"></i></span>
+                    </a>
+                </li>
 
-                </ul>
-                <!-- Nav tabs -->
-                <hr />
-                <!-- Tab panes -->
-                <div class="container">
-                    <div class="tab-content" id="tabs-collapse">
+            </ul>
+            <!-- Nav tabs -->
+            <hr />
+            <!-- Tab panes -->
+            <div class="container">
+                <div class="tab-content" id="tabs-collapse">
 
-                        <div role="tabpanel" class="tab-pane fade" id="biblioteca">
-                            <div id="buscaBiblioteca">
-                                <div class="btn-group-lg text-center">
-                                    <button id="btnBuscaSimple" data-toggle="tooltip" title="Busca Simples" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                                    <button id="btnBuscaDetalhada" data-toggle="tooltip" title="Busca Detalhada" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-zoom-in"></i></button>
-                                </div>
+                    <div role="tabpanel" class="tab-pane fade" id="biblioteca">
+                        <div id="buscaBiblioteca">
+                            <div class="btn-group-lg text-center">
+                                <button id="btnBuscaSimple" data-toggle="tooltip" title="Busca Simples" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                                <button id="btnBuscaDetalhada" data-toggle="tooltip" title="Busca Detalhada" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-zoom-in"></i></button>
                             </div>
                         </div>
-
-                        <div role="tabpanel" class="tab-pane fade" id="financeiro">
-                            <div id="buscaSecretaria">
-                                <div class="btn-group-lg text-center">
-                                    <button id="btnDeclaracaoDeMatricula" data-toggle="tooltip" title="Declaração de Matricula" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-folder-open"></i></button>
-                                    <button id="btnHistoricoEscolar" data-toggle="tooltip" title="Histórico Escolar" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list-alt"></i></button>
-                                    <button id="btnQuadroSolicitacoes" data-toggle="tooltip" title="Quadro de Solicitações" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-edit"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="tab-pane fade" id="aluno">
-                            <p class="lead">Aqui ficará a partial de Biblioteca.</p>
-                        </div>
-
-                        <div role="tabpanel" class="tab-pane fade" id="dados">
-                            <p class="lead">Aqui ficará a partial de Biblioteca.</p>
-                        </div>
-
                     </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="financeiro">
+                        <div id="buscaSecretaria">
+                            <div class="btn-group-lg text-center">
+                                <button id="btnDeclaracaoDeMatricula" data-toggle="tooltip" title="Declaração de Matricula" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-folder-open"></i></button>
+                                <button id="btnHistoricoEscolar" data-toggle="tooltip" title="Histórico Escolar" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list-alt"></i></button>
+                                <button id="btnQuadroSolicitacoes" data-toggle="tooltip" title="Quadro de Solicitações" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="aluno">
+                        <div id="buscaInfoAluno">
+                            <div class="btn-group-lg text-center">
+                                <button id="btnQuadroDeHorarios" data-toggle="tooltip" title="QuadroDeHorarios" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list-alt"></i></button>
+                                <button id="btnGradeAcademica" data-toggle="tooltip" title="GradeAcademica" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="dados">
+                        <p class="lead">Aqui ficará a partial de Biblioteca.</p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <div id="resultadoRequisicao">
-        <div class="card__list">
-            <div class="card__item card__item--orange">
-                <div id="requisicao">
+</div>
+<div id="resultadoRequisicao">
+    <div class="card__list">
+        <div class="card__item card__item--orange">
+            <div id="requisicao">
 
-                </div>
             </div>
         </div>
     </div>

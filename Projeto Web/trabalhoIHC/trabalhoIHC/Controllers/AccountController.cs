@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace trabalhoIHC.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : MessagerBaseController
     {
         public ActionResult Login()
         {
+            this.AddToastMessage("Olá Mundo!", "Esse é o primeiro teste", ToastType.Success);
             return View();
         }
 

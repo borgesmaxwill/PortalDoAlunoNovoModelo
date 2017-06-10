@@ -1,0 +1,22 @@
+﻿@using trabalhoIHC.Controllers;
+@if (ViewData.ContainsKey("Toastr"))
+{
+    Toastr toastr = ViewData["Toastr"] as Toastr;
+
+    <script type="text/javascript" language="javascript">
+        document.addEventListener('DOMContentLoaded',function () {
+            @if (toastr.ToastMessages != null && toastr.ToastMessages.Any())
+        {
+            foreach (var message in toastr.ToastMessages)
+            {
+                        @:toastr.options = @Html.Raw(message.ToastOptionsJson);
+                        @:toastr['@message.ToastType.ToString("F").ToLower()']('@message.Message', '@message.Title');
+                        }
+        }
+        else
+        {
+            @:toastr.options = @Html.Raw(ToastOption.DefaultsJson);
+                    }
+        })
+    </script>
+}
