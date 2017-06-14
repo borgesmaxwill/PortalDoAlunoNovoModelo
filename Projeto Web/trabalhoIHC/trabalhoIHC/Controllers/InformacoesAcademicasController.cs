@@ -18,5 +18,15 @@ namespace trabalhoIHC.Controllers
         {
             return PartialView("_GradeAcademica");
         }
+
+        public PartialViewResult RetornarQuadroDeNotasEFaltas()
+        {
+            return PartialView("_QuadroDeNotasEFaltas");
+        }
+
+        public PartialViewResult RetornarModalDisciplina()
+        {
+            return PartialView("_ModalDisciplina");
+        }
     }
 }

@@ -9,13 +9,14 @@ namespace trabalhoIHC.Filter
 {
     public class MessagesActionFilter : ActionFilterAttribute
     {
+        // This method is called BEFORE the action method is executed
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             // Check for incoming Toastr objects, in case we've been redirected here
             MessagerBaseController controller = filterContext.Controller as MessagerBaseController;
             if (controller != null)
                 controller.Toastr = (controller.TempData["Toastr"] as Toastr)
-                                     ?? new Toastr();
+                                    ?? new Toastr();
 
             base.OnActionExecuting(filterContext);
         }
@@ -24,10 +25,10 @@ namespace trabalhoIHC.Filter
         // result is processed (in the view or in the redirection)
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            MessagerBaseController controller = filterContext.Controller as Controllers.MessagerBaseController;
+            MessagerBaseController controller = filterContext.Controller as MessagerBaseController;
             if (filterContext.Result.GetType() == typeof(ViewResult))
             {
-                if (controller.Toastr != null && controller.Toastr.ToastMessages.Count() > 0)
+                if (controller != null && (controller.Toastr != null && controller.Toastr.ToastMessages.Any()))
                 {
                     // We're going to a view so we store Toastr in the ViewData collection
                     controller.ViewData["Toastr"] = controller.Toastr;
@@ -35,7 +36,7 @@ namespace trabalhoIHC.Filter
             }
             else if (filterContext.Result.GetType() == typeof(RedirectToRouteResult))
             {
-                if (controller.Toastr != null && controller.Toastr.ToastMessages.Count() > 0)
+                if (controller != null && (controller.Toastr != null && controller.Toastr.ToastMessages.Any()))
                 {
                     // User is being redirected to another action method so we store Toastr in
                     // the TempData collection

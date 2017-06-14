@@ -11,6 +11,8 @@
     </div>
 </div>
 
+<div class="modal" id="modal"></div>
+
 @section scripts{
     <script>
         $(document).ready(function () {
@@ -38,6 +40,7 @@
                     $("#requisicao").empty();
                     $("#requisicao").html(data);
                     $("#resultadoRequisicao").show();
+                    ConsultaFalhou();
                 });
             });
 
@@ -81,7 +84,27 @@
                     $("#resultadoRequisicao").show();
                 });
             });
+
+            $("#btnNotasEFaltas").on("click", function () {
+                $.get('@Url.Action("RetornarQuadroDeNotasEFaltas", "InformacoesAcademicas")', function (data) {
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
+                });
+            });
+
+            $("#requisicao").on("click", "table tr td", function() {
+                $.get('@Url.Action("RetornarModalDisciplina", "InformacoesAcademicas")', function (data) {
+                    $("#modal").empty();
+                    $("#modal").html(data);
+                    $("#modal").modal("show");
+            });
+            });
         });
+
+        function ConsultaFalhou() {
+            toastr.error("Vesh", "Verifique os dados!");
+        };
     </script>
 
 }

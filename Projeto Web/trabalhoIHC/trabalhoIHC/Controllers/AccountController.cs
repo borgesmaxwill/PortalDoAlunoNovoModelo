@@ -10,7 +10,7 @@ namespace trabalhoIHC.Controllers
     {
         public ActionResult Login()
         {
-            this.AddToastMessage("Olá Mundo!", "Esse é o primeiro teste", ToastType.Success);
+            this.AddToastMessage("Primeira Notificação", "Olá Mundo!", ToastType.Success);
             return View();
         }
 

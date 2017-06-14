@@ -10,7 +10,6 @@ namespace trabalhoIHC.Controllers
     {
         public ActionResult Index()
         {
-            this.AddToastMessage("Olá Mundo!", "Esse é o primeiro teste", ToastType.Success);
             return View();
         }
 
