@@ -159,6 +159,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infra\Banco.cs" />
+    <Compile Include="Models\Livro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -224,7 +226,6 @@
     <Content Include="Views\Home\_InformacaoDoUsuario.cshtml" />
     <Content Include="Views\Home\_TelaPrincipal.cshtml" />
     <Content Include="Views\Library\_QuickSearch.cshtml" />
-    <Content Include="Views\Library\DetailedSearch.cshtml" />
     <Content Include="Views\Secretary\RegistrationStatement.cshtml" />
     <Content Include="Views\Secretary\SchoolRecords.cshtml" />
     <Content Include="Views\Secretary\RequestsTable.cshtml" />
@@ -233,10 +234,11 @@
     <Content Include="Views\InformacoesAcademicas\_GradeAcademica.cshtml" />
     <Content Include="Views\InformacoesAcademicas\_QuadroDeNotasEFaltas.cshtml" />
     <Content Include="Views\InformacoesAcademicas\_ModalDisciplina.cshtml" />
+    <Content Include="Views\Library\_DetailedSearch.cshtml" />
+    <Content Include="Views\Library\_SearchResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\MessageControllerBase\" />
   </ItemGroup>
   <ItemGroup>

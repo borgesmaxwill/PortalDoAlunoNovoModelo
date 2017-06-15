@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using trabalhoIHC.Models;
 
 namespace trabalhoIHC.Controllers
 {
@@ -13,21 +14,23 @@ namespace trabalhoIHC.Controllers
             return PartialView("_QuickSearch");
         }
 
-        //[HttpPost]
-        //public ActionResult QuickSearch()
-        //{
-        //    return View();
-        //}
+        [HttpPost]
+        public ActionResult QuickSearch(string titulo)
+        {
+            IList<Livro> listaDeLivros = new List<Livro>();
+            return PartialView("_SearchResults", listaDeLivros]);
+        }
 
         public PartialViewResult DetailedSearch()
         {
-            return PartialView();
+            return PartialView("_DetailedSearch");
         }
 
-        //[HttpPost]
-        //public ActionResult DetailedSearch()
-        //{
-        //    return View();
-        //}
+        [HttpPost]
+        public ActionResult DetailedSearch(Livro livro)
+        {
+            IList<Livro> listaDeLivros = new List<Livro>();
+            return PartialView("_SearchResults", listaDeLivros]);
+        }
     }
 }
