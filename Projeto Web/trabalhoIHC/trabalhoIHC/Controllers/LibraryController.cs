@@ -18,7 +18,7 @@ namespace trabalhoIHC.Controllers
         public ActionResult QuickSearch(string titulo)
         {
             IList<Livro> listaDeLivros = new List<Livro>();
-            return PartialView("_SearchResults", listaDeLivros]);
+            return PartialView("_SearchResults", listaDeLivros);
         }
 
         public PartialViewResult DetailedSearch()
@@ -30,7 +30,7 @@ namespace trabalhoIHC.Controllers
         public ActionResult DetailedSearch(Livro livro)
         {
             IList<Livro> listaDeLivros = new List<Livro>();
-            return PartialView("_SearchResults", listaDeLivros]);
+            return PartialView("_SearchResults", listaDeLivros);
         }
     }
 }
