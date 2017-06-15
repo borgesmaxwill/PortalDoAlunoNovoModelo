@@ -55,16 +55,8 @@
             $('[data-toggle="tooltip"]').tooltip();
             $("#resultadoRequisicao").hide();
 
-            $("#btnBuscaSimple").on("click", function () {
-                $.get('@Url.Action("QuickSearch","Library")', function(data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
-
-            $("#btnBuscaDetalhada").on("click", function () {
-                $.get('@Url.Action("DetailedSearch","Library")', function (data) {
+            $("#btnBuscaLivro").on("click", function () {
+                $.get('@Url.Action("BookSearch","Library")', function(data) {
                     $("#requisicao").empty();
                     $("#requisicao").html(data);
                     $("#resultadoRequisicao").show();

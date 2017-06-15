@@ -9,25 +9,13 @@ namespace trabalhoIHC.Controllers
 {
     public class LibraryController : MessagerBaseController
     {
-        public PartialViewResult QuickSearch()
+        public PartialViewResult BookSearch()
         {
-            return PartialView("_QuickSearch");
+            return PartialView("_BookSearch");
         }
 
         [HttpPost]
-        public ActionResult QuickSearch(string titulo)
-        {
-            IList<Livro> listaDeLivros = new List<Livro>();
-            return PartialView("_SearchResults", listaDeLivros);
-        }
-
-        public PartialViewResult DetailedSearch()
-        {
-            return PartialView("_DetailedSearch");
-        }
-
-        [HttpPost]
-        public ActionResult DetailedSearch(Livro livro)
+        public PartialViewResult BookSearch(Livro livro)
         {
             IList<Livro> listaDeLivros = new List<Livro>();
             return PartialView("_SearchResults", listaDeLivros);
