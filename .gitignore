@@ -1,9 +1,5 @@
 
-# Created by https://www.gitignore.io/api/csharp,windows,assembler,visualstudio,microsoftoffice
-
-### Assembler ###
-*.[sS]
-*.bc
+# Created by https://www.gitignore.io/api/csharp,windows,visualstudio
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -295,23 +291,6 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-### MicrosoftOffice ###
-
-# Word temporary
-~$*.doc*
-
-# Excel temporary
-~$*.xls*
-
-# Excel Backup File
-*.xlk
-
-# PowerPoint temporary
-~$*.ppt*
-
-# Visio autosave temporary files
-*.~vsdx
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -465,4 +444,4 @@ $RECYCLE.BIN/
 
 # BizTalk build output
 
-# End of https://www.gitignore.io/api/csharp,windows,assembler,visualstudio,microsoftoffice
+# End of https://www.gitignore.io/api/csharp,windows,visualstudio
