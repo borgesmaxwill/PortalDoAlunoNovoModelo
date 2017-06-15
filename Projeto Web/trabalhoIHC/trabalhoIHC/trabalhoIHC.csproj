@@ -224,10 +224,10 @@
     <Content Include="Views\Home\_InformacaoDoUsuario.cshtml" />
     <Content Include="Views\Home\_TelaPrincipal.cshtml" />
     <Content Include="Views\Library\_QuickSearch.cshtml" />
-    <Content Include="Views\Library\DetailedSearch.cshtml" />
-    <Content Include="Views\Secretary\RegistrationStatement.cshtml" />
-    <Content Include="Views\Secretary\SchoolRecords.cshtml" />
-    <Content Include="Views\Secretary\RequestsTable.cshtml" />
+    <Content Include="Views\Library\_DetailedSearch.cshtml" />
+    <Content Include="Views\Secretary\_RegistrationStatement.cshtml" />
+    <Content Include="Views\Secretary\_SchoolRecords.cshtml" />
+    <Content Include="Views\Secretary\_RequestsTable.cshtml" />
     <Content Include="Views\Shared\_Toastr.cshtml" />
     <Content Include="Views\InformacoesAcademicas\_QuadroDeHorarios.cshtml" />
     <Content Include="Views\InformacoesAcademicas\_GradeAcademica.cshtml" />

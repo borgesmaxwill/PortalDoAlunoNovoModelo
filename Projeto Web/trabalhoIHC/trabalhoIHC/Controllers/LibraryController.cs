@@ -21,7 +21,7 @@ namespace trabalhoIHC.Controllers
 
         public PartialViewResult DetailedSearch()
         {
-            return PartialView();
+            return PartialView("_DetailedSearch");
         }
 
         //[HttpPost]

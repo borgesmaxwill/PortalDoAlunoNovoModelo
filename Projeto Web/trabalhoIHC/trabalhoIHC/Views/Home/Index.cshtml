@@ -44,7 +44,6 @@
                 });
             });
 
-
             $("#btnHistoricoEscolar").on("click", function () {
                 $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
                     $("#requisicao").empty();
