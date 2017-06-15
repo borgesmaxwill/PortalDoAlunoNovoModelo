@@ -56,7 +56,7 @@
             $("#resultadoRequisicao").hide();
 
             $("#btnLibrary").on("click", function () {
-                $.get('@Url.Action("BookSearch","Library")', function(data) {
+                $.get('@Url.Action("BookSearch","Library")', function (data) {
                     $("#requisicao").empty();
                     $("#requisicao").html(data);
                     $("#resultadoRequisicao").show();
