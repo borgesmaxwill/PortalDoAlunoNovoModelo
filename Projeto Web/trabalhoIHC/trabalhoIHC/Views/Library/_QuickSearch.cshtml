@@ -4,13 +4,49 @@
     ViewBag.Title = "QuickSearch";
 }
 
-<div>
-    <form class="navbar-form">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Título" name="txtBusca">
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+<form class="form-horizontal">
+    <fieldset>
+
+        <legend>Busca de Livros</legend>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtTitulo"></label>
+            <div class="col-md-4">
+                <input id="txtTitulo" name="Titulo" placeholder="Título" class="form-control input-md" type="text">
+
             </div>
         </div>
-    </form>
-</div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtAutor"></label>
+            <div class="col-md-4">
+                <input id="txtAutor" name="Autor" placeholder="Autor" class="form-control input-md" type="text">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtEditora"></label>
+            <div class="col-md-4">
+                <input id="txtEditora" name="Editora" placeholder="Editora" class="form-control input-md" type="text">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtDataPublicacao"></label>
+            <div class="col-md-4">
+                <input id="txtDataPublicacao" name="DataPublicacao" placeholder="Data de Publicação" class="form-control input-md" type="text">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="btnBusca"></label>
+            <div class="col-md-4">
+                <button id="btnBusca" name="btnBusca" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
