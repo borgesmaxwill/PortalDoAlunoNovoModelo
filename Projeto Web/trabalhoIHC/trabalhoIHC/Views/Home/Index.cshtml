@@ -55,7 +55,7 @@
             $('[data-toggle="tooltip"]').tooltip();
             $("#resultadoRequisicao").hide();
 
-            $("#btnBuscaLivro").on("click", function () {
+            $("#btnLibrary").on("click", function () {
                 $.get('@Url.Action("BookSearch","Library")', function(data) {
                     $("#requisicao").empty();
                     $("#requisicao").html(data);
