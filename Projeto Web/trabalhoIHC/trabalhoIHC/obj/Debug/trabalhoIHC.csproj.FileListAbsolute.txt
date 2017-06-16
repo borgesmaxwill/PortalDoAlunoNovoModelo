@@ -202,7 +202,6 @@ D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\tr
 D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\trabalhoIHC\bin\System.Web.WebPages.Razor.xml
 D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\trabalhoIHC\bin\Antlr3.Runtime.pdb
 D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\trabalhoIHC\bin\Newtonsoft.Json.xml
-D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\trabalhoIHC\obj\Debug\trabalhoIHC.csprojResolveAssemblyReference.cache
 D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\trabalhoIHC\obj\Debug\trabalhoIHC.dll
 D:\MaxFacul\sis-7\InterfaceHomemComputador\Nova pasta\Projeto Web\trabalhoIHC\trabalhoIHC\obj\Debug\trabalhoIHC.pdb
 C:\Users\diego\Projetos\Trabalho de IHC\Projeto Web\trabalhoIHC\trabalhoIHC\obj\Debug\trabalhoIHC.csprojResolveAssemblyReference.cache

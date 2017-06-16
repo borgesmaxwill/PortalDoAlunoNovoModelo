@@ -63,6 +63,14 @@
                 });
             });
 
+            $("#btnBusca").on("click", function () {
+                $.get('@Url.Action("BookSearchResult", "Library")', function (data) {
+                    $("#requisicao").empty();
+                    $("#requisicao").html(data);
+                    $("#resultadoRequisicao").show();
+                });
+            });
+
             $("#btnDeclaracaoDeMatricula").on("click", function () {
                 $.get('@Url.Action("RegistrationStatement", "Secretary")', function(data) {
                     $("#requisicao").empty();

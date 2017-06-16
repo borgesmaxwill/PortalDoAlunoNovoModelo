@@ -14,10 +14,9 @@ namespace trabalhoIHC.Controllers
             return PartialView("_BookSearch");
         }
 
-        [HttpPost]
-        public PartialViewResult BookSearch(Livro livro)
+        public PartialViewResult BookSearchResult(Livro livro)
         {
-            IList<Livro> listaDeLivros = new List<Livro>();
+            IList<Livro> listaDeLivros = livro.Busca();
             return PartialView("_SearchResults", listaDeLivros);
         }
     }
