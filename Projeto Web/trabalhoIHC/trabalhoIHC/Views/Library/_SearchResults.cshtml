@@ -1,27 +1,34 @@
 ﻿@model IList<trabalhoIHC.Models.Livro>
 
-<div class="well">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Editora</th>
-                <th>Data de publicação</th>
-                <th>Situação</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var livro in Model)
-            {
+<div class="panel panel-default">
+
+    <div class="panel-heading text-center">
+        <h3>Resultado da Busca</h3>
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-responsive table-striped">
+            <thead>
                 <tr>
-                    <td>@livro.Titulo</td>
-                    <td>@livro.Autor</td>
-                    <td>@livro.Editora</td>
-                    <td>@livro.DataPublicacao</td>
-                    <td>@livro.Situacao</td>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Editora</th>
+                    <th>Data de publicação</th>
+                    <th>Situação</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var livro in Model)
+            {
+                    <tr>
+                        <td>@livro.Titulo</td>
+                        <td>@livro.Autor</td>
+                        <td>@livro.Editora</td>
+                        <td>@livro.DataPublicacao</td>
+                        <td>@livro.Situacao</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

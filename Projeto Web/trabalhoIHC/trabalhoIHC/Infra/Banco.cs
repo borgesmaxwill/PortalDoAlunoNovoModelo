@@ -26,16 +26,16 @@ namespace trabalhoIHC.Infra
 
         public static IList<Livro> BuscaLivros(Livro livro)
         {
-            IList<Livro> retorno = new List<Livro>();
-            for (int i = 0; i < livros.Count; i++)
-            {
-                if(livros[i].Titulo == livro.Titulo || livros[i].Autor == livro.Autor || livros[i].Editora == livro.Editora || livros[i].DataPublicacao == livro.DataPublicacao)
-                {
-                    retorno.Add(livros[i]);
-                }
-            }
-
-            return retorno;
+            Inicializa();
+            //IList<Livro> retorno = new List<Livro>();
+            //for (int i = 0; i < livros.Count; i++)
+            //{
+            //    if(livros[i].Titulo.Contains(livro.Titulo) || livros[i].Autor.Contains(livro.Autor) || livros[i].Editora.Contains(livro.Editora) || livros[i].DataPublicacao == livro.DataPublicacao))))
+            //    {
+            //        retorno.Add(livros[i]);
+            //    }
+            //}
+            return livros;
         }
     }
 }

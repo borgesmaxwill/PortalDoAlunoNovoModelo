@@ -30,9 +30,16 @@ namespace trabalhoIHC
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css",
+                      "~/Content/Site.css",
                       "~/Content/font-awesome.css",
+                      "~/Content/.css",
                       "~/Content/bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/Content/cssLogin").Include(
+                "~/Content/siteLogin.css",
+                "~/Content/font-awesome.css",
+                "~/Content/.css",
+                "~/Content/bootstrap.css"));
         }
     }
 }

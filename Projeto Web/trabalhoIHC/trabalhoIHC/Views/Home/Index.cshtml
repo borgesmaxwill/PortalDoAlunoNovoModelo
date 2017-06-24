@@ -38,12 +38,22 @@
     </style>
 }
 <div class="panel panel-body">
-    <div class="col-md-4 col-sm-6">
-        @Html.Partial("_InformacaoDoUsuario")
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            @Html.Partial("_InformacaoDoUsuario")
+        </div>
+
+        <div class="col-md-8 col-sm-6">
+            @Html.Partial("_TelaPrincipal")
+        </div>
     </div>
 
-    <div class="col-md-8 col-sm-6">
-        @Html.Partial("_TelaPrincipal")
+    <div class="row">
+        <div class="card__list">
+            <div class="card__item card__item--green">
+                <div id="calendar"></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -54,21 +64,26 @@
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
             $("#resultadoRequisicao").hide();
+            CarregarCalendario();
 
             $("#btnLibrary").on("click", function () {
                 $.get('@Url.Action("BookSearch","Library")', function (data) {
                     $("#requisicao").empty();
                     $("#requisicao").html(data);
                     $("#resultadoRequisicao").show();
+                    $("#txtTitulo").focus();
                 });
             });
 
-            $("#btnBusca").on("click", function () {
-                $.get('@Url.Action("BookSearchResult", "Library")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
+            $("#requisicao").on("click", "button", function () {
+                var value = $(this).attr('data-value');
+                if (value == 'livros'){
+                    $.get('@Url.Action("BookSearchResult", "Library")', function (data) {
+                        $("#requisicao").empty();
+                        $("#requisicao").html(data);
+                        $("#resultadoRequisicao").show();
+                    });
+                }
             });
 
             $("#btnDeclaracaoDeMatricula").on("click", function () {
@@ -128,12 +143,15 @@
                 });
             });
 
-            $("#requisicao").on("click", "table tr td", function() {
-                $.get('@Url.Action("RetornarModalDisciplina", "InformacoesAcademicas")', function (data) {
-                    $("#modal").empty();
-                    $("#modal").html(data);
-                    $("#modal").modal("show");
-            });
+            $("#requisicao").on("click", "table tr", function () {
+                var value = $(this).attr('data-value');
+                if(value == 'nota'){
+                    $.get('@Url.Action("RetornarModalDisciplina", "InformacoesAcademicas")', function (data) {
+                        $("#modal").empty();
+                        $("#modal").html(data);
+                        $("#modal").modal("show");
+                    });
+                }
             });
         });
 

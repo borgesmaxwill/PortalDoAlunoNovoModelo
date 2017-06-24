@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/toastr")  
+    @Styles.Render("~/Content/toastr")
     @Styles.Render("~/Content/styleInfoUser.css")
     @Styles.Render("~/Content/telaPrincipal.css")
     @Styles.Render("~/Content/styleBody.css")
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/calendar.css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
         body {
@@ -23,13 +24,14 @@
     </style>
 </head>
 <body>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/toastr")
+    @Scripts.Render("~/Scripts/calendar.js")
     @Html.Partial("_Toastr")
     @RenderSection("scripts", required: false)
 </body>
