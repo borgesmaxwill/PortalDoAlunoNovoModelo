@@ -9,11 +9,13 @@ namespace trabalhoIHC.Controllers
 {
     public class LibraryController : MessagerBaseController
     {
+        [HttpGet]
         public PartialViewResult BookSearch()
         {
             return PartialView("_BookSearch");
         }
 
+        [HttpPost]
         public PartialViewResult BookSearchResult(Livro livro)
         {
             IList<Livro> listaDeLivros = livro.Busca();

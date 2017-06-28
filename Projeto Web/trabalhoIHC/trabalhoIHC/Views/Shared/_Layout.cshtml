@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/toastr")
-    @Styles.Render("~/Content/styleInfoUser.css")
-    @Styles.Render("~/Content/telaPrincipal.css")
-    @Styles.Render("~/Content/styleBody.css")
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/calendar.css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
-        body {
-            background: #e9e9e9;
-            color: #666666;
-            font-family: 'RobotoDraft', 'Roboto', sans-serif;
-            font-size: 14px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow: scroll;
-        }
-    </style>
 </head>
 <body>
+    @Html.Partial("_NavegacaoMobile")
     <div class="body-content">
         @RenderBody()
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/toastr")
     @Scripts.Render("~/Scripts/calendar.js")
     @Html.Partial("_Toastr")
+    <script>
+        $(document).ready(function () {
+            $('a[href="#navbar-more-show"], .navbar-more-overlay').on('click', function (event) {
+                event.preventDefault();
+                $('body').toggleClass('navbar-more-show');
+                if ($('body').hasClass('navbar-more-show')) {
+                    $('a[href="#navbar-more-show"]').closest('li').addClass('active');
+                } else {
+                    $('a[href="#navbar-more-show"]').closest('li').removeClass('active');
+                }
+                return false;
+            });
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

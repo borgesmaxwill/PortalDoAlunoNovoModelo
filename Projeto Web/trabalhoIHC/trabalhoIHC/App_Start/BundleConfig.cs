@@ -30,16 +30,21 @@ namespace trabalhoIHC
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/Site.css",
+                      "~/Content/styleBody.css",
+                      "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
-                      "~/Content/.css",
-                      "~/Content/bootstrap.css"));
+                      "~/Content/calendar.css",
+                      "~/Content/telaPrincipal.css",
+                      "~/Content/styleInfoUser.css",
+                      "~/Content/styleProgressBar.css",
+                      "~/Content/styleNavMobile.css",
+                      "~/Content/Site.css"));
 
             bundles.Add(new StyleBundle("~/Content/cssLogin").Include(
                 "~/Content/siteLogin.css",
-                "~/Content/font-awesome.css",
-                "~/Content/.css",
-                "~/Content/bootstrap.css"));
+                "~/Content/styleLogin.css",
+                "~/Content/bootstrap.css",
+                "~/Content/font-awesome.css"));
         }
     }
 }

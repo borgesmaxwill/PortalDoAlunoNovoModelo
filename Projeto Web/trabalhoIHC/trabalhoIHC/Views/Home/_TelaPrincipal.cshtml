@@ -2,77 +2,63 @@
     Layout = null;
 }
 
-<div class="" role="tabpanel">
-    <div class="card__list">
-        <div class="card__item card__item--blue">
+<div class="visible-lg visible-md">
+    <div class="" role="tabpanel">
+        <div class="card__list">
+            <div class="card__item card__item--blue">
+                <ul class="nav nav-justified" id="nav-tabs" role="tablist">
+                    <li role="presentation" class="">
+                        <a id="btnLibrary" href="#biblioteca" aria-controls="biblioteca" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-book fa-4x"></i>
+                        </a>
+                    </li>
 
-            <ul class="nav nav-justified" id="nav-tabs" role="tablist">
+                    <li role="presentation" class="">
+                        <a href="#financeiro" aria-controls="financeiro" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-handshake-o fa-4x"></i>
+                        </a>
+                    </li>
 
-                <li role="presentation" class="">
-                    <a id="btnLibrary" href="#biblioteca" aria-controls="biblioteca" role="tab" data-toggle="tab">
-                        <i class="img-circle fa fa-book fa-4x"></i>
-                        <span class="quote"><i class="fa fa-quote-left"></i></span>
-                    </a>
-                </li>
+                    <li role="presentation" class="">
+                        <a href="#aluno" aria-controls="aluno" role="tab" data-toggle="tab">
+                            <i class="img-circle fa fa-mortar-board fa-4x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Nav tabs -->
+                <hr />
+                <!-- Tab panes -->
+                <div class="container">
+                    <div class="tab-content" id="tabs-collapse">
+                       
+                        <div role="tabpanel" class="tab-pane fade" id="biblioteca">
+                            <div id="buscaBiblioteca">
+                                <div class="btn-group-lg text-center">
 
-                <li role="presentation" class="">
-                    <a href="#financeiro" aria-controls="financeiro" role="tab" data-toggle="tab">
-                        <i class="img-circle fa fa-handshake-o fa-4x"></i>
-                        <span class="quote"><i class="fa fa-quote-left"></i></span>
-                    </a>
-                </li>
+                                </div>
+                            </div>
+                        </div>
 
-                <li role="presentation" class="">
-                    <a href="#aluno" aria-controls="aluno" role="tab" data-toggle="tab">
-                        <i class="img-circle fa fa-mortar-board fa-4x"></i>
-                        <span class="quote"><i class="fa fa-quote-left"></i></span>
-                    </a>
-                </li>
+                        <div role="tabpanel" class="tab-pane fade" id="financeiro">
+                            <div id="buscaSecretaria">
+                                <div class="btn-group-lg text-center">
+                                    <button id="btnDeclaracaoDeMatricula" data-toggle="tooltip" title="Declaração de Matricula" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-folder-open"></i></button>
+                                    <button id="btnQuadroSolicitacoes" data-toggle="tooltip" title="Quadro de Solicitações" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
 
-            </ul>
-            <!-- Nav tabs -->
-            <hr />
-            <!-- Tab panes -->
-            <div class="container">
-                <div class="tab-content" id="tabs-collapse">
-
-                    <div role="tabpanel" class="tab-pane fade" id="biblioteca">
-                        <div id="buscaBiblioteca">
-                            <div class="btn-group-lg text-center">
-                                
+                        <div role="tabpanel" class="tab-pane fade" id="aluno">
+                            <div id="buscaInfoAluno">
+                                <div class="btn-group-lg text-center">
+                                    <button id="btnQuadroDeHorarios" data-toggle="tooltip" title="Quadro De Horarios" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list-alt"></i></button>
+                                    <button id="btnGradeAcademica" data-toggle="tooltip" title="Grade Academica" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list"></i></button>
+                                    <button id="btnNotasEFaltas" data-toggle="tooltip" title="Notas e Faltas" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div role="tabpanel" class="tab-pane fade" id="financeiro">
-                        <div id="buscaSecretaria">
-                            <div class="btn-group-lg text-center">
-                                <button id="btnDeclaracaoDeMatricula" data-toggle="tooltip" title="Declaração de Matricula" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-folder-open"></i></button>
-                                <button id="btnQuadroSolicitacoes" data-toggle="tooltip" title="Quadro de Solicitações" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-edit"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div role="tabpanel" class="tab-pane fade" id="aluno">
-                        <div id="buscaInfoAluno">
-                            <div class="btn-group-lg text-center">
-                                <button id="btnQuadroDeHorarios" data-toggle="tooltip" title="Quadro De Horarios" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list-alt"></i></button>
-                                <button id="btnGradeAcademica" data-toggle="tooltip" title="Grade Academica" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list"></i></button>
-                                <button id="btnNotasEFaltas" data-toggle="tooltip" title="Notas e Faltas" class="btn btn-lg btn-default"><i class="glyphicon glyphicon-list"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="resultadoRequisicao">
-    <div class="card__list">
-        <div class="card__item card__item--orange">
-            <div id="requisicao">
-
             </div>
         </div>
     </div>

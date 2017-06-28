@@ -173,6 +173,8 @@
     <Content Include="Content\styleBody.css" />
     <Content Include="Content\styleInfoUser.css" />
     <Content Include="Content\styleLogin.css" />
+    <Content Include="Content\styleNavMobile.css" />
+    <Content Include="Content\styleProgressBar.css" />
     <Content Include="Content\telaPrincipal.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
@@ -200,6 +202,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -241,6 +245,9 @@
     <Content Include="Views\InformacoesAcademicas\_ModalDisciplina.cshtml" />
     <Content Include="Views\Library\_SearchResults.cshtml" />
     <Content Include="Views\Library\_BookSearch.cshtml" />
+    <Content Include="Views\Home\_Calendar.cshtml" />
+    <Content Include="Views\Shared\_NavegacaoMobile.cshtml" />
+    <Content Include="Views\Home\_FullStackLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

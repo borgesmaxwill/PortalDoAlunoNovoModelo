@@ -13,8 +13,6 @@
     border-radius: 15px;
     color: #fff;  
 }
-.nav.nav-justified > li.active > a > .quote { opacity: 1; }
-/*.nav.nav-justified > li > a > i { box-shadow: 0 0 0 5px #13c0ba; }*/
 .nav.nav-justified > li > a > i { 
     max-width: 100%; 
     opacity: .3; 

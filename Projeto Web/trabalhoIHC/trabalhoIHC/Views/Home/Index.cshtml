@@ -1,57 +1,31 @@
 ﻿@{
     ViewBag.Title = "Pagina Inicial";
-    <style>
-        .progress {
-            background: none repeat scroll 0 0 #f3f3f3;
-
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            -ms-box-shadow: none;
-            -o-box-shadow: none;
-            box-shadow: none;
-	
-            height: 6px;
-            margin: 7px 0 0;
-            overflow: visible;
-        }
-        .progress > .progress-bar {
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            -ms-box-shadow: none;
-            -o-box-shadow: none;
-            box-shadow: none;
-	
-            position: relative;
-        }
-        .progress > .progress-bar > span {
-            background: none repeat scroll 0 0 #8d8d8d;
-            font-family: Roboto;
-            font-size: 10px;
-            height: 18px;
-            line-height: 18px;
-            margin-top: -9px;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 31px;
-        }
-    </style>
 }
 <div class="panel panel-body">
-    <div class="row">
-        <div class="col-md-4 col-sm-6">
-            @Html.Partial("_InformacaoDoUsuario")
-        </div>
+    <div class="visible-lg visible-md">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                @Html.Partial("_InformacaoDoUsuario")
+            </div>
 
-        <div class="col-md-8 col-sm-6">
-            @Html.Partial("_TelaPrincipal")
+            <div class="col-md-8 col-sm-6">
+                @Html.Partial("_TelaPrincipal")
+            </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="card__list">
-            <div class="card__item card__item--green">
-                <div id="calendar"></div>
+    <div class="visible-xs visible-sm">
+        <div class="col-sm-12">
+            @Html.Partial("_InformacaoDoUsuario")
+            
+            <div id="resultadoRequisicao">
+                <div class="card__list">
+                    <div class="card__item card__item--orange">
+                        <div id="requisicao">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -60,6 +34,7 @@
 <div class="modal" id="modal"></div>
 
 @section scripts{
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js");
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -158,6 +133,26 @@
         function ConsultaFalhou() {
             toastr.error("Vesh", "Verifique os dados!");
         };
+
+        function BuscarBibliotecaOk() {
+            toastr.success("Ok", "Deu certo Biblioteca!");
+            $("#resultadoRequisicao").show();
+            $("#txtTitulo").focus();
+        }
+
+        function BuscarBibliotecaFalhou() {
+            toastr.error("Vesh", "Deu errado Biblioteca!");
+        }
+
+        function BuscarBibliotecaPostOk() {
+            toastr.success("Ok", "Deu certo Post Biblioteca!");
+            $("#resultadoRequisicao").show();
+            $("#txtTitulo").focus();
+        }
+
+        function BuscarBibliotecaPostFalhou() {
+            toastr.error("Vesh", "Deu errado Post Biblioteca!");
+        }
     </script>
 
 }

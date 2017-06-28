@@ -1,0 +1,33 @@
+﻿.progress {
+    background: none repeat scroll 0 0 #f3f3f3;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    height: 6px;
+    margin: 7px 0 0;
+    overflow: visible;
+}
+
+    .progress > .progress-bar {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+        position: relative;
+    }
+
+        .progress > .progress-bar > span {
+            background: none repeat scroll 0 0 #8d8d8d;
+            font-family: Roboto;
+            font-size: 10px;
+            height: 18px;
+            line-height: 18px;
+            margin-top: -9px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 31px;
+        }
