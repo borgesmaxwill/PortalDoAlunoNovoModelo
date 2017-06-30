@@ -13,21 +13,10 @@ namespace trabalhoIHC.Controllers
             return PartialView("_RegistrationStatement");
         }
 
-        public PartialViewResult SchoolRecords()
-        {
-            return PartialView("_SchoolRecords");
-        }
-
         public PartialViewResult RequestsTable()
         {
             return PartialView("_RequestsTable");
         }
 
-        [HttpPost]
-        public ActionResult ConcluirRegistro()
-        {
-            this.AddToastMessage("Sucesso", "Solicitação Confirmada!", ToastType.Success);
-            return RedirectToAction("Index", "Home");
-        }
     }
 }

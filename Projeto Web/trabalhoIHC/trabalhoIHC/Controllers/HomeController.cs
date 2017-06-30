@@ -13,5 +13,10 @@ namespace trabalhoIHC.Controllers
             return View();
         }
 
+        public PartialViewResult RetornarCalendario()
+        {
+            return PartialView("_Calendar");
+        }
+
     }
 }

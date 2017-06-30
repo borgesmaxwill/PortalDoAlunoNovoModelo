@@ -1,6 +1,4 @@
-﻿@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
-
-html, body {
+﻿html, body {
     height: 100%;
 }
 body {    
@@ -69,10 +67,7 @@ body.navbar-more-show  {
     display: block;
     font-size: 1.8em;
 }
-    .navbar-nav.mobile-bar > li > button > span.menu-icon {
-        display: block;
-        font-size: 1.8em;
-    }
+
 .navbar-more {
     background-color: rgb(255, 255, 255);
     height: calc(100% - 69px);
@@ -82,20 +77,12 @@ body.navbar-more-show  {
     border-width: 0px;
 }
 .navbar-more .navbar-nav > li > a {
-    color: rgb(64, 64, 64);   
+    color: rgb(64, 64, 64);
 }
 .navbar-more > .navbar-nav > li > a > span.menu-icon {
     margin-left: 10px;
     margin-right: 10px;
 }
-    .navbar-more .navbar-nav > li > button {
-        color: rgb(64, 64, 64);
-    }
-
-    .navbar-more > .navbar-nav > li > button > span.menu-icon {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
 
 @media (min-width: 768px) {
     .navbar {

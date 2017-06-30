@@ -4,11 +4,11 @@
 <div class="panel panel-body">
     <div class="visible-lg visible-md">
         <div class="row">
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-12">
                 @Html.Partial("_InformacaoDoUsuario")
             </div>
 
-            <div class="col-md-8 col-sm-6">
+            <div class="col-md-8 col-sm-12">
                 @Html.Partial("_TelaPrincipal")
             </div>
         </div>
@@ -17,13 +17,14 @@
     <div class="visible-xs visible-sm">
         <div class="col-sm-12">
             @Html.Partial("_InformacaoDoUsuario")
-            
-            <div id="resultadoRequisicao">
-                <div class="card__list">
-                    <div class="card__item card__item--orange">
-                        <div id="requisicao">
+        </div>
+    </div>
+    <div class="col-sm-12 hidden-lg hidden-md">
+        <div id="resultadoRequisicaoMobile">
+            <div class="card__list">
+                <div class="card__item card__item--orange">
+                    <div id="requisicaoMobile">
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -34,89 +35,15 @@
 <div class="modal" id="modal"></div>
 
 @section scripts{
-    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js");
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+    @Scripts.Render("~/Scripts/functionBiblioteca.js")
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
             $("#resultadoRequisicao").hide();
+            $("#resultadoRequisicaoMobile").hide();
             CarregarCalendario();
-
-            $("#btnLibrary").on("click", function () {
-                $.get('@Url.Action("BookSearch","Library")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                    $("#txtTitulo").focus();
-                });
-            });
-
-            $("#requisicao").on("click", "button", function () {
-                var value = $(this).attr('data-value');
-                if (value == 'livros'){
-                    $.get('@Url.Action("BookSearchResult", "Library")', function (data) {
-                        $("#requisicao").empty();
-                        $("#requisicao").html(data);
-                        $("#resultadoRequisicao").show();
-                    });
-                }
-            });
-
-            $("#btnDeclaracaoDeMatricula").on("click", function () {
-                $.get('@Url.Action("RegistrationStatement", "Secretary")', function(data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                    ConsultaFalhou();
-                });
-            });
-
-            $("#btnHistoricoEscolar").on("click", function () {
-                $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
-
-            $("#btnQuadroSolicitacoes").on("click", function () {
-                $.get('@Url.Action("RequestsTable", "Secretary")', function(data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
-
-            $("#btnHistoricoEscolar").on("click", function () {
-                $.get('@Url.Action("SchoolRecords", "Secretary")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
-
-            $("#btnQuadroDeHorarios").on("click", function () {
-                $.get('@Url.Action("RetornarQuadroDeHorarios", "InformacoesAcademicas")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
-
-            $("#btnGradeAcademica").on("click", function () {
-                $.get('@Url.Action("RetornarGradeAcademica", "InformacoesAcademicas")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
-
-            $("#btnNotasEFaltas").on("click", function () {
-                $.get('@Url.Action("RetornarQuadroDeNotasEFaltas", "InformacoesAcademicas")', function (data) {
-                    $("#requisicao").empty();
-                    $("#requisicao").html(data);
-                    $("#resultadoRequisicao").show();
-                });
-            });
+            
 
             $("#requisicao").on("click", "table tr", function () {
                 var value = $(this).attr('data-value');
@@ -128,31 +55,20 @@
                     });
                 }
             });
+
+            $("#requisicaoMobile").on("click", "table tr", function () {
+                var value = $(this).attr('data-value');
+                if(value == 'nota'){
+                    $.get('@Url.Action("RetornarModalDisciplina", "InformacoesAcademicas")', function (data) {
+                        $("#modal").empty();
+                        $("#modal").html(data);
+                        $("#modal").modal("show");
+                    });
+                }
+            });
         });
 
-        function ConsultaFalhou() {
-            toastr.error("Vesh", "Verifique os dados!");
-        };
 
-        function BuscarBibliotecaOk() {
-            toastr.success("Ok", "Deu certo Biblioteca!");
-            $("#resultadoRequisicao").show();
-            $("#txtTitulo").focus();
-        }
-
-        function BuscarBibliotecaFalhou() {
-            toastr.error("Vesh", "Deu errado Biblioteca!");
-        }
-
-        function BuscarBibliotecaPostOk() {
-            toastr.success("Ok", "Deu certo Post Biblioteca!");
-            $("#resultadoRequisicao").show();
-            $("#txtTitulo").focus();
-        }
-
-        function BuscarBibliotecaPostFalhou() {
-            toastr.error("Vesh", "Deu errado Post Biblioteca!");
-        }
     </script>
 
 }
